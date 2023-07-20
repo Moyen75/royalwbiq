@@ -7,9 +7,9 @@ function Header() {
     const { data: session, status } = useSession();
     return (
 
-        <header className="header-area primary-bg">
+        <header className="header-area priwrappermary-bg container mx-auto">
             <div className="wrapper">
-                <div className="container mx-auto px-0">
+                <div className="container mx-auto">
                     <div className="flex items-center">
                         <div className="md:columns-3">
                             <a href="#" className="header-logo">
