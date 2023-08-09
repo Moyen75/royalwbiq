@@ -181,13 +181,6 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@nangohq/node@^0.24.5":
-  version "0.24.5"
-  resolved "https://registry.yarnpkg.com/@nangohq/node/-/node-0.24.5.tgz#842ff53a22a03e9039787918a79ca4dba4449639"
-  integrity sha512-5I+fdHessSZZO+uoTb8Ui47t524GvuFIdYzVJ+gTR1KX3cNcK9rrILplfsxFm3KA6qBmsSUZocXYF3m82hHh3w==
-  dependencies:
-    axios "^1.2.0"
-
 "@panva/asn1.js@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@panva/asn1.js/-/asn1.js-1.0.0.tgz#dd55ae7b8129e02049f009408b97c61ccf9032f6"

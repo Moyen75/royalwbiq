@@ -85,7 +85,7 @@ addIntegration = async (req, res, next) => {
 }
 router.get("/person", getPersonData);
 router.put("/person/:uid", authRoute, updatePersonData);
-router.post("/person", authRoute, setPersonData);
+router.post("/person", setPersonData);
 router.post("/person/integrations", authRoute, addIntegration);
 
 

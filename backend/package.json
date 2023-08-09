@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@deepgram/sdk": "^1.21.0",
-    "@nangohq/node": "^0.24.5",
     "app-root-path": "^3.0.0",
     "axios": "^0.21.1",
     "cors": "^2.8.1",
