@@ -2,9 +2,10 @@
 import React from 'react';
 import Image from 'next/image';
 import '../app/globals.css'
-import { useSession } from "next-auth/react"
+import useAuth from '../utils/useFirebase';
 function Header() {
-    const { data: session, status } = useSession();
+    const { user, logOut } = useAuth();
+
     return (
 
         <header className="header-area priwrappermary-bg container mx-auto">
@@ -34,15 +35,19 @@ function Header() {
                                     <li className="menu-item">
                                         <a href="/" className="menu-link">Contact</a>
                                     </li>
+                                    {!user ? <li className="menu-item">
+                                        <a href="/login" className="menu-link">Login/Register</a>
+                                    </li> : <li className="menu-item">
+                                        <p onClick={logOut} className="menu-link logout">Logout</p>
+                                    </li>
+                                    }
                                     {
-                                        status === "!authenticated" ? <li className="menu-item">
-                                            <a href="/login" className="menu-link">Login/Register</a>
-                                        </li> :
-                                            <li className="menu-item">
-                                                <div className='menu-item'>
-                                                    <Image src={session?.user.image} width={30} height={10} alt="Avatar" className="rounded  py-0" loading="lazy" />
-                                                </div>
-                                            </li>
+                                        user &&
+                                        <li className="menu-item">
+                                            <div className='menu-item'>
+                                                <Image src={user?.photoURL || "/images/avatar.webp"} width={30} height={10} alt="Avatar" className="rounded  py-0" loading="lazy" />
+                                            </div>
+                                        </li>
                                     }
                                     <li className="menu-item">
                                         <a href="/" className="menu-link-icon flex items-center relative" title="Wishlist">

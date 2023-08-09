@@ -1,0 +1,25 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      ["build", "-t", "gcr.io/$PROJECT_ID/talk-emma-backend:$SHORT_SHA", "."]
+
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/talk-emma-backend:$SHORT_SHA"]
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: [
+        "beta",
+        "run",
+        "deploy",
+        "talk-emma-backend",
+        "--image=gcr.io/$PROJECT_ID/talk-emma-backend:$SHORT_SHA",
+        "--region=us-central1",
+        "--allow-unauthenticated",
+        "--set-secrets",
+        "MONGO_DB_URI=talk-emma-db-uri:latest,FIREBASE_SERVICE_ACCOUNT=talk-emma-service-account:latest,
+        OPENAI_API_KEY=talk-emma-openai-api-key:latest,
+        AZURE_API_KEY=talk-emma-azure-api-key:latest",
+        NANGO_SECRET_KEY=talk-emma-nango-secret-key:latest
+      ]
+options:
+  logging: CLOUD_LOGGING_ONLY

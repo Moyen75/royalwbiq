@@ -1,0 +1,149 @@
+[
+    {
+        "name": "getWeather",
+        "description": "Get the current weather in a given location",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "string",
+                    "description": "The city or state, e.g. San Francisco, CA"
+                }
+            },
+            "required": [
+                "location"
+            ]
+        }
+    },
+    {
+        "name": "sendEmail",
+        "description": "Send an email",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "to": {
+                    "type": "string",
+                    "description": "The email address to send to"
+                },
+                "subject": {
+                    "type": "string",
+                    "description": "The subject of the email"
+                },
+                "body": {
+                    "type": "string",
+                    "description": "The body of the email"
+                }
+            },
+            "required": [
+                "to",
+                "subject",
+                "body"
+            ]
+        }
+    },
+    {
+        "name": "getAllEmails",
+        "description": "Get all emails from my personal email account.you have access to get emails list.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "connectionId": {
+                    "type": "string",
+                    "description": "The connection id"
+                }
+            }
+        }
+    },
+    {
+        "name": "getEmail",
+        "description": "Get email",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "connectionId": {
+                    "type": "string",
+                    "description": "The connection id"
+                },
+                "messageId": {
+                    "type": "string",
+                    "description": "The message id"
+                }
+            },
+            "required": [
+                "messageId"
+            ]
+        }
+    },
+    {
+        "name": "addEventToCalendar",
+        "description": "Add an event to a calendar",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "connectionId": {
+                    "type": "string",
+                    "description": "The connection id"
+                },
+                "summary": {
+                    "type": "string",
+                    "description": "The summary of the event"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the event"
+                },
+                "start": {
+                    "type": "string",
+                    "description": "The start date of the event"
+                },
+                "end": {
+                    "type": "string",
+                    "description": "The end date of the event"
+                }
+            },
+            "required": [
+                "summary",
+                "description",
+                "start",
+                "end"
+            ]
+        }
+    },
+    {
+        "name": "getEvents",
+        "description": "Get events",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "connectionId": {
+                    "type": "string",
+                    "description": "The connection id"
+                }
+            },
+            "required": [
+                "connectionId"
+            ]
+        }
+    },
+    {
+        "name": "getEvent",
+        "description": "Get event",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "connectionId": {
+                    "type": "string",
+                    "description": "The connection id"
+                },
+                "eventId": {
+                    "type": "string",
+                    "description": "The event id"
+                }
+            },
+            "required": [
+                "connectionId",
+                "eventId"
+            ]
+        }
+    }
+]
