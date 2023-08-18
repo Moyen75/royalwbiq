@@ -9,7 +9,8 @@
     "start": "NODE_ENV=production node app.js"
   },
   "dependencies": {
-    "@deepgram/sdk": "^1.21.0",
+    "@google-ai/generativelanguage": "^1.0.0",
+    "google-auth-library": "^9.0.0",
     "app-root-path": "^3.0.0",
     "axios": "^0.21.1",
     "cors": "^2.8.1",
