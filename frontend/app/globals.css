@@ -38,7 +38,7 @@ Variables
   --primary-color: #ffffff;
   --secondary-color: #545454;
   --text-color3: #ffffff;
-  --text-color: #581845;
+  --text-color: #d3cfcf;
   --text-color5: #dd5621;
 
   /*_________ BG Color _________*/
@@ -83,7 +83,7 @@ body {
   font-size: var(--size-md);
   color: var(--primary-color);
   line-height: 1.6;
-  background-color: var(--primary-bg);
+  background-color: #111827;
 }
 
 *,
@@ -628,7 +628,11 @@ span,
             */
 .header-area {
   padding: 15px 0;
-  border-bottom: 1px solid var(--border-3);
+  /* border-bottom: 1px solid var(--border-3); */
+}
+
+.user-account {
+  color: #142a49;
 }
 
 .menu .menu-item:not(:last-child) {
@@ -831,3 +835,45 @@ span,
 Login Page Style CSS
 ============================================================
 */
+
+/* 
+=========================================
+Carousel Style CSS
+=========================================
+*/
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  /* max-width: 800px; */
+  /* Adjust to your desired width */
+  right: 0;
+  margin: 20px auto;
+}
+
+.carousel-slide {
+  display: none;
+  text-align: center;
+  transition: display 1s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+
+}
+
+.carousel-slide.active {
+  display: block;
+  transition: display 2s ease-in-out;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 10;
+  left: 50%;
+}

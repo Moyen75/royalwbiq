@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import '../app/globals.css'
 import useAuth from '../utils/useFirebase';
+import UserDropdown from './UserDropdown';
 function Header() {
     const { user, logOut } = useAuth();
 
@@ -35,17 +36,15 @@ function Header() {
                                     <li className="menu-item">
                                         <a href="/" className="menu-link">Contact</a>
                                     </li>
-                                    {!user ? <li className="menu-item">
+                                    {!user && <li className="menu-item">
                                         <a href="/login" className="menu-link">Login/Register</a>
-                                    </li> : <li className="menu-item">
-                                        <p onClick={logOut} className="menu-link logout">Logout</p>
                                     </li>
                                     }
                                     {
                                         user &&
-                                        <li className="menu-item">
-                                            <div className='menu-item'>
-                                                <Image src={user?.photoURL || "/images/avatar.webp"} width={30} height={10} alt="Avatar" className="rounded  py-0" loading="lazy" />
+                                        <li className="menu-item relative">
+                                            <div className='menu-item relative'>
+                                                <UserDropdown user={user} logOut={logOut} />
                                             </div>
                                         </li>
                                     }

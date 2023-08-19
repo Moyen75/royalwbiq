@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 
-function Banner() {
+function page() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
 
@@ -64,4 +64,4 @@ function Banner() {
     )
 }
 
-export default Banner
+export default page
