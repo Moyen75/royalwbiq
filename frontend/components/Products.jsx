@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import products from '../assets/products.json'
 import Product from './Product'

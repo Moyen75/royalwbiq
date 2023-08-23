@@ -867,6 +867,7 @@ Carousel Style CSS
 .carousel-slide.active {
   display: block;
   transition: display 2s ease-in-out;
+  animation: slide 7s ease-in-out;
 }
 
 .carousel-controls {
@@ -876,4 +877,27 @@ Carousel Style CSS
   width: 100%;
   z-index: 10;
   left: 50%;
+}
+
+/* create an animation for the carousel */
+@keyframes slide {
+  0% {
+    opacity: 0.1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
 }

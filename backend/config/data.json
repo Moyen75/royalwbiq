@@ -1,0 +1,135 @@
+[
+    {
+        "id": "1",
+        "name": "The Classic T-Shirt",
+        "description": "A simple and stylish t-shirt that is perfect for everyday wear.",
+        "colors": [
+            "Red",
+            "Blue",
+            "White"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "prices": {
+            "S": 10,
+            "M": 15,
+            "L": 20,
+            "XL": 25
+        },
+        "images": {
+            "Red": "https://example.com/red-tshirt.jpg",
+            "Blue": "https://example.com/blue-tshirt.jpg",
+            "White": "https://example.com/white-tshirt.jpg"
+        }
+    },
+    {
+        "id": "2",
+        "name": "The Graphic T-Shirt",
+        "description": "A t-shirt with a fun or stylish graphic.",
+        "colors": [
+            "Black",
+            "White"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "prices": {
+            "S": 15,
+            "M": 20,
+            "L": 25,
+            "XL": 30
+        },
+        "images": {
+            "Black": "https://example.com/black-graphic-tshirt.jpg",
+            "White": "https://example.com/white-graphic-tshirt.jpg"
+        }
+    },
+    {
+        "id": "3",
+        "name": "The V-Neck T-Shirt",
+        "description": "A t-shirt with a v-neck neckline.",
+        "colors": [
+            "Black",
+            "White",
+            "Pink"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "prices": {
+            "S": 12,
+            "M": 17,
+            "L": 22,
+            "XL": 27
+        },
+        "images": {
+            "Black": "https://example.com/black-vneck-tshirt.jpg",
+            "White": "https://example.com/white-vneck-tshirt.jpg",
+            "Pink": "https://example.com/pink-vneck-tshirt.jpg"
+        }
+    },
+    {
+        "id": "4",
+        "name": "The Long Sleeve T-Shirt",
+        "description": "A t-shirt with long sleeves.",
+        "colors": [
+            "Black",
+            "White",
+            "Grey"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "prices": {
+            "S": 15,
+            "M": 20,
+            "L": 25,
+            "XL": 30
+        },
+        "images": {
+            "Black": "https://example.com/black-long-sleeve-tshirt.jpg",
+            "White": "https://example.com/white-long-sleeve-tshirt.jpg",
+            "Grey": "https://example.com/grey-long-sleeve-tshirt.jpg"
+        }
+    },
+    {
+        "id": "5",
+        "name": "The Oversized T-Shirt",
+        "description": "A t-shirt that is designed to be oversized.",
+        "colors": [
+            "Black",
+            "White",
+            "Blue"
+        ],
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "prices": {
+            "S": 17,
+            "M": 22,
+            "L": 27,
+            "XL": 32
+        },
+        "images": {
+            "Black": "https://example.com/black-oversized-tshirt.jpg",
+            "White": "https://example.com/white-oversized-tshirt.jpg",
+            "Blue": "https://example.com/blue-oversized-tshirt.jpg"
+        }
+    }
+]
