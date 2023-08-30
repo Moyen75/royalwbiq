@@ -1,36 +1,42 @@
 "use client";
-import React, { useEffect, useState } from 'react'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-function Banner() {
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-    };
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 
+import { Autoplay, Pagination} from 'swiper/modules';
+
+const Banner = () => {
     return (
-        <div className='w-[80%] mx-auto'>
-            <Slider {...settings}>
-                <div>
+        <>
+            <Swiper
+                spaceBetween={30}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Autoplay, Pagination]}
+                className="mySwiper"
+            >
+                <SwiperSlide>
                     <img src="/images/hero/1.jpg" alt="" />
-                </div>
-                <div>
-                    <img src="/images/hero/2.jpg" alt="" />
-                </div>
-                <div>
-                    <img src="/images/hero/3.jpg" alt="" />
-                </div>
-            </Slider>
-        </div>
-    )
-}
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="/images/hero/2.jpg" alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                <img src="/images/hero/3.jpg" alt="" />
+                </SwiperSlide>
+            </Swiper>
+        </>
+    );
+};
 
-export default Banner
+export default Banner;
+
