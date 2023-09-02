@@ -4,11 +4,14 @@ import React, { useEffect, useRef, useState } from 'react'
 function UserDropdown({ user, logOut }) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const [image, setImage] = useState("/user.jpg");
 
     const toggleDropdown = () => {
         if (user) setIsDropdownOpen(!isDropdownOpen);
     };
-
+    useEffect(() => {
+        setImage(user?.photoURL ? user.photoURL : "/user.jpg");
+    }, [user]);
     // Close the dropdown when a click occurs outside of it
     useEffect(() => {
         function handleClickOutside(event) {
@@ -28,7 +31,7 @@ function UserDropdown({ user, logOut }) {
     }
     return (
         <div className='relative w-10' ref={dropdownRef}>
-            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" className="relative menu-item w-10 h-10 rounded-full cursor-pointer" src={user?.photoURL ? user?.photoURL : '/user.jpg'} alt="User dropdown" onClick={toggleDropdown} />
+            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" className="relative menu-item w-10 h-10 rounded-full cursor-pointer" src={image} alt="user" onClick={toggleDropdown} />
 
             {isDropdownOpen && <div id="userDropdown" className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                 <div className="px-4 py-3 text-sm text-red-900 dark:text-white">
