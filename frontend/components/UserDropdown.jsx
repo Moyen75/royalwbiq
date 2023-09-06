@@ -28,9 +28,11 @@ function UserDropdown({ user, logOut }) {
     }
     return (
         <div className='relative w-10' ref={dropdownRef}>
-            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" className="relative menu-item w-10 h-10 rounded-full cursor-pointer" src={user?.photoURL ? user?.photoURL : '/user.jpg'} alt="User dropdown" onClick={toggleDropdown} />
+            <div className='flex items-center justify-center'>
+                <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" className="text-center relative menu-item w-10 h-10 rounded-full cursor-pointer" src={user?.photoURL ? user?.photoURL : '/user.jpg'} alt="User dropdown" onClick={toggleDropdown} />
+            </div>
 
-            {isDropdownOpen && <div id="userDropdown" className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            {isDropdownOpen && <div id="userDropdown" className="z-50 mr-5 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                 <div className="px-4 py-3 text-sm text-red-900 dark:text-white">
                     <div>{capitalizeFirstLetter(user.displayName)}</div>
                     <div className="font-medium truncate">{user.email} </div>

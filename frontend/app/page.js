@@ -20,7 +20,7 @@ export default function Home() {
   //   </div>
   // }
   return (<>
-    <div>
+    <div className='relative'>
       <Header />
       <Banner />
       <Products />
