@@ -38,7 +38,7 @@ Variables
   --primary-color: #ffffff;
   --secondary-color: #545454;
   --text-color3: #ffffff;
-  --text-color: #d3cfcf;
+  --text-color: #111827;
   --text-color5: #dd5621;
 
   /*_________ BG Color _________*/
@@ -83,7 +83,7 @@ body {
   font-size: var(--size-md);
   color: var(--primary-color);
   line-height: 1.6;
-  background-color: #111827;
+  background-color: #fff;
 }
 
 *,
